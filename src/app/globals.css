@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'FFF Forward';
+  src: url('/fonts/FFFForward.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Playwrite NZ';
+  src: url('/fonts/PlaywriteNZ.ttf') format('truetype');
+}
+
+
+.retro {
+  font-family: 'FFF Forward';
+}
+
+.playwritenz {
+  font-family: 'Playwrite NZ';
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

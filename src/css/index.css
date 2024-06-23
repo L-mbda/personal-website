@@ -1,0 +1,26 @@
+.cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+.cont h1 {
+    & {
+        font-size: 3rem;
+        font-family: 'Playwrite NZ';
+    }
+    #pnz {
+        font-size: 3.5rem;
+    }
+}
+
+#descriptor {
+    background-color: rgb(5, 107, 51);
+    border-radius: 10px;
+    font-size: 2rem;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+}
