@@ -1,9 +1,11 @@
 .cont {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 70vh;
+    background: linear-gradient(9deg, rgb(4, 141, 107), rgb(11, 117, 38));
+    color: white;
 }
 .cont h1 {
     & {
@@ -16,11 +18,46 @@
 }
 
 #descriptor {
-    background-color: rgb(5, 107, 51);
     border-radius: 10px;
-    font-size: 2rem;
-    padding: 2px;
+    /* font-size: 2rem; */
+    /* padding: 2px;
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 10px; */
     margin: auto;
+}
+.socials {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 2.5rem;
+}
+
+.youtube {
+    & {
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        transition: 500ms;
+        align-items: center;
+        /* border: 2px solid rgb(255, 11, 11); */
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+    &:hover {
+        color: rgb(255, 11, 11)
+    }
+    &:focus {
+        color:rgb(255, 11, 11);
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .cont {
+        align-items: center;
+    }    
+    .cont h1 {
+        margin: auto;
+        text-align: center;
+    }
 }
