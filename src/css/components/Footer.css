@@ -93,6 +93,9 @@ h2 {
             background-color: rgb(212, 212, 212);
         }
     }
+    .link-column a {
+        color: black;
+    }
 }
 
 .about {

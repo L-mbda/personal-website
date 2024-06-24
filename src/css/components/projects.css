@@ -1,0 +1,107 @@
+.projects {
+    & {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(32, 32, 32);    
+        padding: 20px;
+        height: fit-content;
+        color: white;
+        gap: 2em;
+    }
+    h1 {
+        font-size: 2.15rem;
+        font-family: 'Playwrite NZ';
+    }
+}
+
+.proj-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    width: 60%;
+}
+
+.recent-proj {
+    background-color: rgb(48, 48, 48);
+    border-radius: 10px;
+    padding: 10px;
+    height: 60%;
+    width: 80%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.proj-group-vert {
+    flex: 1;
+    flex-direction: column;
+    gap: 1em;
+    height: fit-content;
+    
+}
+
+.second-proj {
+    background-color: rgb(48, 48, 48);
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px;
+    height: 60%;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.arrow {
+    font-size: 1.5rem;
+    color: white;
+    transform: translateY(8px);
+}
+.proj-grid a:hover {
+    transform: scale(1.01);
+}
+
+.proj-grid a {
+    transition: 400ms;
+}
+.visit-gallery {
+    background: linear-gradient(84deg, rgb(4, 168, 4), rgb(37, 22, 255));
+    margin: auto;
+    font-family: 'Playwrite NZ';
+    background-size: cover;
+    height: 135px;
+    width: 100%;
+    margin-top: 1em;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (prefers-color-scheme: light) {
+    .projects {
+        background-color: rgb(236, 236, 236);
+        color: black;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .proj-grid {
+        width: 95%;
+    }
+    .recent-proj {
+        width: 100%;
+    }
+    .second-proj {
+        width: 100%;
+    }
+    .visit-gallery {
+        width: 100%;
+    }
+}
