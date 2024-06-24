@@ -1,5 +1,6 @@
 'use client';
 import { Projects } from '@/components/Projects';
+import { Research } from '@/components/Research';
 import '@/css/index.css'
 import { BiLogoGithub, BiLogoYoutube } from "react-icons/bi";
 
@@ -45,6 +46,7 @@ export default function Home() {
         </div>
       </div>
       <Projects />
+      <Research />
     </>
   );
 }

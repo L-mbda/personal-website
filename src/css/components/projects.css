@@ -4,7 +4,7 @@
         flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
-        background-color: rgb(32, 32, 32);    
+        background-color: rgb(39, 39, 39);    
         padding: 20px;
         height: fit-content;
         color: white;
@@ -100,8 +100,26 @@
 
 @media screen and (prefers-color-scheme: light) {
     .projects {
-        background-color: rgb(236, 236, 236);
+        background-color: rgb(219, 218, 218);
         color: black;
+    }
+    .recent-proj {
+        background-color: rgb(199, 199, 199);
+    }
+    .recent-proj * {
+        color: black !important;
+    }
+
+    .second-proj {
+        background-color: rgb(199, 199, 199);
+    }
+
+    .second-proj * {
+        color: black !important;
+    }
+
+    .visit-gallery {
+        color: white;
     }
 }
 

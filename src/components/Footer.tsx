@@ -18,9 +18,9 @@ export function Footer() {
             </div>
             <div className='links-section'>
                 <div className='link-column'>
-                    <h2>Links</h2>
-                    <a href='/'>Projects</a>
-                    <a href='/'>Github</a>
+                    <h2>Site</h2>
+                    {/* <a href='/projects'>Project Gallery</a> */}
+                    <a href='/'>About Me (on homepage)</a>
                 </div>
             </div>
         </footer>
