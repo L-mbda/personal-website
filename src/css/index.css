@@ -61,3 +61,86 @@
         text-align: center;
     }
 }
+
+.about {
+    & {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+        color: white;
+        background-color: rgb(32, 32, 32);
+    }
+    * {
+        margin-top: 2em;
+    }
+    h1 {
+        font-size: 2.25rem;
+        font-family: 'Playwrite NZ';
+    }
+    a {
+        color: rgb(85, 164, 253);
+        font-family: monospace;
+        font-size: 1rem;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.separator {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 5%;
+
+}
+.about-left {
+    width: 30%;
+}
+
+.about-right {
+    & {
+        width: 30%;
+    }
+    img {
+        border-radius: 10px;
+    }
+    p {
+        font-size: 0.75rem;
+    
+    }
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3em;
+    
+}
+
+@media screen and (max-width: 760px) {
+    .separator {
+        flex-direction: column;
+    }
+    .about-left {
+        width: 80%;
+        flex-direction: column;
+    }
+    .about-right {
+        & {
+            height: fit-content;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    img {
+        width: 70%;
+        height: 70%;
+    }
+}

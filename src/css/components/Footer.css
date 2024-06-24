@@ -68,9 +68,22 @@ h2 {
         margin-top: 2rem;
         padding: 20px;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
     h2 {
-        padding: 20px;
+        padding: 15px;
+    }
+    a {
+        & {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            transition: 500ms;        
+        }
+    }
+    a:hover {
+        text-decoration: underline;
     }
 }
 
@@ -79,5 +92,11 @@ h2 {
         & {
             background-color: rgb(212, 212, 212);
         }
+    }
+}
+
+.about {
+    & {
+        display: flex;
     }
 }
