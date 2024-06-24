@@ -20,8 +20,9 @@ export async function GET(request: any) {
     repo_names.sort((a, b) => {
         return a.id - b.id
     })
-
+    console.log('TIME')
     return NextResponse.json({
-        'message': 'Sent.',
+        'recentProject': repo_names[(repo_names.length)-1],
+        'secondRecentProject': repo_names[(repo_names.length)-2]
     })
 }

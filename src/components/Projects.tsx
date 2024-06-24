@@ -1,11 +1,16 @@
 'use client';
 import '@/css/components/projects.css'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BsArrowRight } from 'react-icons/bs';
 
 export function Projects() {
     let [loadingStatus, setLoadingStatus] = useState(true);
-    fetch('http://localhost:3000/api/get_recent_projects')
+    let projects = []
+    fetch('/api/get_recent_projects').then(res => res.json().then(data => {
+        projects.push(data['recentProject'])
+        projects.push(data['secondRecentProject'])
+        setLoadingStatus(false)
+    }))
     return (
         <>
             {loadingStatus ? (
@@ -27,18 +32,18 @@ export function Projects() {
                     <div className='projects'>
                         <h1>My most recent projects among those in the gallery.</h1>
                         <div className='proj-grid'>
-                            <a className="recent-proj">
-                                <h2>Project</h2>
-                                <p>Description</p>
+                            {/* <a href={projects[0]['name']} className="recent-proj">
+                                <h2>{projects[0]['name']}</h2>
+                                <p>{projects[0]['description']}</p>
                             </a>
                             <div className="proj-group-vert">
                                 <a className='second-proj'>
-                                    <h2>Project</h2>
+                                    <h2>{projects[0]['name']}</h2>
                                 </a>
                                 <a className='visit-gallery' href='/projects'>
                                     <p>Visit the gallery <BsArrowRight className='arrow' /></p>
                                 </a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 )
