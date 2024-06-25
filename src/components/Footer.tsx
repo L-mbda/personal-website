@@ -19,8 +19,10 @@ export function Footer() {
             <div className='links-section'>
                 <div className='link-column'>
                     <h2>Site</h2>
-                    {/* <a href='/projects'>Project Gallery</a> */}
-                    <a href='/'>About Me (on homepage)</a>
+                    <a href='/#about'>About</a>
+                    <a href='/research'>Research</a>
+                    <a href='/projects'>Projects</a>
+
                 </div>
             </div>
         </footer>

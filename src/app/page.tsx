@@ -25,7 +25,7 @@ export default function Home() {
           <a className='github' href='https://github.com/de-y'><BiLogoGithub /></a>
         </div>
       </div>
-      <div className='about'>
+      <div className='about' id='about'>
         <h1>About Me</h1>
         <div className='separator'>
           <div className='about-left'>
@@ -45,7 +45,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* <Projects /> */}
+      <Projects />
       <Research />
     </>
   );
