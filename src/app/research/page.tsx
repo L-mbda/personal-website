@@ -33,22 +33,78 @@ export default function ResearchPag() {
                         {
                             loading ? (
                                 <>
-                                    <h1>Loading...</h1>
+                                            <div className='recent'>
+                                                <a className='recent-research loading'>
+                                                    <h1></h1>
+                                                    <p></p>
+                                                </a>
+                                            </div>
                                 </>
                             ) : (
                                 <>
-                                    <div className='recent'>
-                                        <div className='recent-research'>
-                                            <h1>{recentResearch.title}</h1>
-                                            <p>{recentResearch.authors}</p>
-                                            <p>{recentResearch.description}</p>
-                                        </div>
-                                        <div className='second-recent'>
-                                            <h1>{otherResearch[0].title}</h1>
-                                            <p>{otherResearch[0].authors}</p>
-                                            <p>{otherResearch[0].description}</p>
-                                        </div>
-                                    </div>
+                                    {/* @ts-ignore */}
+                                    {(recentResearch['url'] === null && recentResearch['title'] == null && recentResearch['authors'] == null) ? (
+                                        <>
+                                            <div className='recent'>
+                                                <a className='recent-research'>
+                                                    <h1>Nothing found.</h1>
+                                                    <p>There have been no papers or articles published by me, yet.</p>
+                                                </a>
+                                            </div>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <div className='recent'>
+                                                {/* @ts-ignore */}
+                                                <a className='recent-research' href={`${recentResearch.url}`}>
+                                                    {/* @ts-ignore */}
+                                                    <h1>{recentResearch.title}</h1>
+                                                    {/* @ts-ignore */}
+                                                    <p>By {recentResearch.authors}</p>
+                                                    {/* @ts-ignore */}
+                                                    <p>Fields: {recentResearch.fields}</p>
+                                                    {/* @ts-ignore */}
+                                                    <p>{recentResearch.description}</p>
+                                                </a>
+                                                {/* @ts-ignore */}
+                                                {(otherResearch[0] == null) ? null : (
+                                                    // @ts-ignore
+                                                    <a className='second-recent-research' href={`${recentResearch.url}`}>
+                                                        {/* @ts-ignore */}
+                                                        <h1>{otherResearch[0].title}</h1>
+                                                        {/* @ts-ignore */}
+                                                        <p>By {otherResearch[0].authors}</p>
+                                                        {/* @ts-ignore */}
+                                                        <p>Fields: {recentResearch.fields}</p>
+                                                        {/* @ts-ignore */}
+                                                        <p>{otherResearch[0].description}</p>
+                                                    </a>
+                                                )}
+                                            </div>
+                                            <div className='other-research'>
+                                                {
+                                                    (otherResearch[1] == null) ? null : (
+                                                        <>
+                                                            {
+                                                                otherResearch.slice(1).map(researchProject => (
+                                                                    // @ts-ignore
+                                                                    <a key={researchProject} className='other-research-project' href={`${researchProject.url}`}>
+                                                                        {/* @ts-ignore */}
+                                                                        <h1>{researchProject.title}</h1>
+                                                                        {/* @ts-ignore */}
+                                                                        <p>By {researchProject.authors}</p>
+                                                                        {/* @ts-ignore */}
+                                                                        <p>Fields: {researchProject.fields}</p>
+                                                                        {/* @ts-ignore */}                                                                        
+                                                                        <p>{researchProject.description}</p>
+                                                                    </a>
+                                                                ))
+                                                            }
+                                                        </>
+                                                    )
+                                                }
+                                            </div>
+                                        </>)}
                                 </>
                             )
                         }
