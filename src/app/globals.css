@@ -4,9 +4,14 @@
 }
 
 @font-face {
+  font-family: 'Karla';
+  src: url('/fonts/Karla.ttf') format('truetype');
+}
+@font-face {
   font-family: 'Playwrite NZ';
   src: url('/fonts/PlaywriteNZ.ttf') format('truetype');
 }
+
 
 
 .retro {
@@ -21,6 +26,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Karla';
 }
 
 html,

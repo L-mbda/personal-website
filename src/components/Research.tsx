@@ -8,7 +8,7 @@ export function Research() {
     let [mostRecentPaper, setMostRecentPaper] = useState(null)
 
     useEffect(() => {
-        fetch('/api/get_recent_research').then((r) => {r.json().then((d) => {
+        fetch('/api/research').then((r) => {r.json().then((d) => {
             setMostRecentPaper(d[d.length - 1])
             setLoadingStatus(false)
         })})
