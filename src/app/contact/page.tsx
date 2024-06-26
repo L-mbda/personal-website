@@ -8,7 +8,7 @@ export default async function Contact() {
             <h1>You would like to contact me?</h1>
             <p>I'm delighted! You can contact me through the following methods:</p>
             <ul>
-                <a className="email" href="mailto:df@avnce.org"><MdEmail /></a>
+                <a className="email" href="mailto:dj.chintapalli@gmail.com"><MdEmail /></a>
             </ul>
         </div>
     )

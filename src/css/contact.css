@@ -21,3 +21,19 @@ ul {
 .email:hover {
     color: rgb(221, 221, 221);
 }
+
+@media screen and (prefers-color-scheme: light) {
+    .contact {
+        background-color: rgb(194, 194, 194);
+    }
+    .email:hover {
+        color: rgb(41, 41, 41);
+    }
+}
+
+.contact h1 {
+    text-align: center;
+}
+.contact p {
+    text-align: center;
+}
