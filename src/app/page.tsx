@@ -3,13 +3,14 @@ import { Projects } from '@/components/Projects';
 import { Research } from '@/components/Research';
 import '@/css/index.css'
 import { BiLogoGithub, BiLogoYoutube } from "react-icons/bi";
+import Image from 'next/image';
 
 export default function Home() {
   let descriptor = ["Programmer", "Student", "Researcher", "Developer", "YouTuber", "Gamer"]
   if (typeof window !== 'undefined') {
     let c = 0;
     setInterval(() => {
-      (document.getElementById('descriptor') as HTMLElement).innerHTML = descriptor[c];
+      (document.getElementById("descriptor") as HTMLElement).innerHTML = descriptor[c];
       c++;
       if (c >= descriptor.length) {
         c = 0;
@@ -19,7 +20,7 @@ export default function Home() {
   return (
     <>
       <div className="cont">
-        <h1><span className="mono">Hi, I'm</span> <span className="playrightnz" id="pnz">Dheeraj (de-y).</span><br /> I am a <span id="descriptor">person with many interests</span>.</h1>
+        <h1><span className="mono">Hi, I&apos;m</span> <span className="playrightnz" id="pnz">Dheeraj (de-y).</span><br /> I am a <span id="descriptor">person with many interests</span>.</h1>
         <div className='socials'>
           <a className='youtube' href='https://youtube.com/@de-y'><BiLogoYoutube /></a>
           <a className='github' href='https://github.com/de-y'><BiLogoGithub /></a>
@@ -40,7 +41,7 @@ export default function Home() {
             </ul>
           </div>
           <div className='about-right'>
-            <img src='/images/detroitgmhq.jpg' alt='me' height={375.40849673202614379084967320261} width={500} />
+            <Image src='/images/detroitgmhq.jpg' alt='Detroit GM HQ' height={375.40849673202614379084967320261} width={500} />
             <p>Photo of the GM Headquarters in Detroit, Michigan</p>
           </div>
         </div>

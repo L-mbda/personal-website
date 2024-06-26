@@ -4,7 +4,7 @@ export function Navbar() {
     return (
         <>
             <nav className="navbar">
-                <a href='/'><strong>de-y's website</strong></a>
+                <a href='/'><strong>de-y&apos;s website</strong></a>
                 <div className="nav-links">
                     <a href='/#about'>About</a>
                     <a href='/research'>Research</a>
