@@ -89,8 +89,8 @@ export function Projects() {
                                 {/* @ts-ignore */}
                                     <h2>{`${secondProjects['name']}`}</h2>
                                 </a>
-                                <a className='visit-gallery' href='https://github.com/de-y?tab=repositories'>
-                                    <p>View all projects on GitHub <BsArrowRight className='arrow' /></p>
+                                <a className='visit-gallery' href='/projects'>
+                                    <p>View all projects in Projects Gallery <BsArrowRight className='arrow' /></p>
                                 </a>
                             </div>
                         </div>

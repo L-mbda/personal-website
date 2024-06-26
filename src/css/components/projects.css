@@ -97,6 +97,21 @@
     align-items: center;
     justify-content: center;
 }
+.loading_proj {
+    animation: loadingProjects 3s infinite;
+}
+
+@keyframes loadingProjects {
+    0% {
+        background-color: rgb(22, 22, 22);
+    }
+    50% {
+        background-color: rgb(48, 48, 48);
+    }
+    100% {
+        background-color: rgb(22, 22, 22);
+    }
+}
 
 @media screen and (prefers-color-scheme: light) {
     .projects {
@@ -121,7 +136,22 @@
     .visit-gallery {
         color: white;
     }
+    .loading_proj {
+        animation: loadingProjectsLight 3s infinite;
+    }
+
 }
+@keyframes loadingProjectsLight {
+    0% {
+        background-color: rgb(199, 199, 199);
+    }
+    50% {
+        background-color: rgb(187, 187, 187);
+    }
+    100% {
+        background-color: rgb(199, 199, 199);
+    }
+}    
 
 @media screen and (max-width: 768px) {
     .proj-grid {
@@ -138,18 +168,3 @@
     }
 }
 
-.loading_proj {
-    animation: loadingProjects 3s infinite;
-}
-
-@keyframes loadingProjects {
-    0% {
-        background-color: rgb(22, 22, 22);
-    }
-    50% {
-        background-color: rgb(48, 48, 48);
-    }
-    100% {
-        background-color: rgb(22, 22, 22);
-    }
-}

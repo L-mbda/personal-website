@@ -1,0 +1,62 @@
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    margin: 1rem;
+    background-color: rgb(44, 44, 44);
+    width: 100%;
+    margin: auto;
+}
+
+.card {
+    background-color: rgb(63, 63, 63);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 1rem;
+    display: flex;
+    min-width: 10vw;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.welcome-to-projects {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    margin: auto;
+    padding: 1em;
+    background-color: rgb(65, 83, 241);
+}
+
+.loading-projects {
+    text-align: center;
+    padding: 1em;
+    display: flex;
+    font-family: 'Playwrite NZ';
+    font-size: 3em;
+    justify-content: center;
+    align-items: center;
+}
+.loading-projects {
+    min-height: 100vh;
+    background-color: rgb(44, 44, 44);
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (prefers-color-scheme: light) {
+    .loading-projects {
+        background-color: rgb(226, 226, 226);
+    }
+    .projects-grid {
+        background-color: rgb(226, 226, 226);
+    }
+    .card {
+        background-color: rgb(211, 211, 211);
+    }
+    .welcome-to-projects {
+        color: white;
+    }
+}

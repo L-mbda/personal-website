@@ -126,3 +126,35 @@
         background-color: rgb(167, 62, 62);
     }
 }
+
+@media screen and (max-width: 768px) {
+    .research-box {
+        flex-direction: column;
+    }
+    .recent-research {
+        width: 100%;
+    }
+    .second-recent-research {
+        width: 100%;
+    }
+    .other-research-project {
+        width: 100%;
+    }
+}
+
+@media screen and (prefers-color-scheme: light) {
+    .research {
+        & {
+            background-color: rgb(184, 184, 184);
+        }
+        * {
+            color: white;
+        }  
+    }
+    .research-header p {
+        color: black;
+    }
+    .research-content {
+        background-color: rgb(226, 226, 226);
+    }
+}
